@@ -3,6 +3,10 @@
   vars_prompt:
    - name: COURSE
      prompt: "Enter the course information"
+   - name: DURATION
+     prompt: "Enter Duration Time"
+   - name: TRAINER
+     prompt: "Enter the Trainee Name"
   tasks:
   - name: print the information
     ansible.builtin.debug:
