@@ -3,10 +3,13 @@
   vars_prompt:
    - name: COURSE
      prompt: "Enter the course information"
+     private: false # Not Confidential
    - name: DURATION
      prompt: "Enter Duration Time"
+     private: false # Not Confidential
    - name: TRAINER
      prompt: "Enter the Trainee Name"
+     private: false # Not Confidential
   tasks:
   - name: print the information
     ansible.builtin.debug:
