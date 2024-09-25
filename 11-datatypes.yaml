@@ -1,22 +1,25 @@
-- name: Devops course information
+- name: devops course information
   hosts: local
+  connection: local # for localhosts
   vars:
-    Course: "DevOps with AWS" # String
-    Duration: 120 hrs # number
-    topics:   # List
+    course: "DevOps with AWS" #string
+    duration: 120 #number
+    topics: #list
     - Linux
-    - Unix
     - Shell
-    - AWS
     - Ansible
     - Terraform
-    live: true # Boolean
-    tools: # map/dictionary
-      ci: jenkins
+    - AWS
+    - K8
+    live: true #boolean
+    tools: #map/dictionary
+      ci: jenkins # string
       cm: ansible
       cloud: aws
+      aws:
+      - IAM
+      - S3
   tasks:
   - name: print the course information
-    ansible.buitlin.debug:
-      mag: "Hi i am learning {{Course}}, with duration {{Duration}}, topics are : {{topics}}, and live: {{live}}, tools are: {{tools}}"
-
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
