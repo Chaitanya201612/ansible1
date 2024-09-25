@@ -7,6 +7,7 @@
     register: USER # here user is a  variable the gets output from above command
 
   - name: print the user information
-    ansible.buitlin.debug:
-      msg: "user info {{ USER }}"
+    ansible.builtin.debug:
+      msg: "user info: {{ USER }}"
+
 
