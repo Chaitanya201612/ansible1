@@ -6,5 +6,5 @@
     ansible.builtin.shell: ls -ltr > /tmp/output.txt # login to the server and execute command inside
      # command is secure then shell
   - name: check the process
-    ansible.builtin.command:
+    ansible.builtin.command: ps -ef | grep ssh
     register: output
