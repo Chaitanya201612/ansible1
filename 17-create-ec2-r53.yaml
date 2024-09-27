@@ -4,8 +4,8 @@
   # assignment
   # move this to vars_files
   vars:
-    subnet_id: "subnet-09863c54177764565" # replace with your subnet id
-    sg_id: "sg-09a300a3729062c5a"
+    subnet_id: "subnet-01da8fabbcf3cef92" # replace with your subnet id
+    sg_id: "sg-085f1c0bf1482d06c"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
     - mysql
@@ -28,4 +28,3 @@
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
     register: ec2_instances
-    
